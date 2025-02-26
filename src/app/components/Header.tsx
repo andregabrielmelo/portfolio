@@ -1,74 +1,45 @@
-import { Github, Linkedin, Mail } from "lucide-react";
-
 import Link from "next/link";
-import Image from "next/image";
-import { buttonVariants } from "./ui/button";
+
+import Logo from "./Logo";
+
+import { ThemeToggle } from "@/app/components/ThemeToggle";
 
 export default function Header() {
-    const buttonClasses = "bg-transparent border-none transition-all";
     return (
         <>
-            <header className="flex p-3 gap-4 sticky top-0 hover:backdrop-blur-xl backdrop-blur-sm transition-all">
-                <Link href="/" className="flex justify-center">
-                    <Image
-                        src="favicon.svg"
-                        alt="Logo"
-                        width={24}
-                        height={24}
-                    />
+            <header className="flex justify-between items-center p-8 sticky top-0 transition-all backdrop-blur-xs bg-gradient-to-b from-(--color-background) via-(--color-background) via-35% to-(--color-background)/5">
+                <Link href="/" title="Vá para a Home Page">
+                    <Logo className="text-foreground w-6" />
                 </Link>
                 <nav className="flex gap-3 items-center">
                     <ul className="flex gap-3">
                         <li>
-                            <a className="font-bold" href="#">
+                            <Link
+                                className="text-muted-foreground hover:underline hover:underline-offset-4"
+                                href="/about"
+                            >
                                 Sobre
-                            </a>
+                            </Link>
                         </li>
                         <li>
-                            <a className="font-bold" href="#">
+                            <Link
+                                className="text-muted-foreground hover:underline hover:underline-offset-4"
+                                href="/projects"
+                            >
                                 Projetos
-                            </a>
+                            </Link>
+                        </li>
+                        <li>
+                            <Link
+                                className="text-muted-foreground hover:underline hover:underline-offset-4"
+                                href="/hobbies"
+                            >
+                                Hobbies
+                            </Link>
                         </li>
                     </ul>
+                    <ThemeToggle />
                 </nav>
-                <div className="flex gap-2 ml-auto">
-                    <Link
-                        href="mailto:andregabrielmelo@gmail.com"
-                        className={buttonVariants({
-                            variant: "outline",
-                            className: buttonClasses,
-                            size: "icon",
-                        })}
-                    >
-                        <Mail size={24} />
-                    </Link>
-
-                    <Link
-                        href="https://github.com/andregabrielmelo"
-                        className={buttonVariants({
-                            variant: "outline",
-                            className: buttonClasses,
-                            size: "icon",
-                        })}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        <Github size={24} />
-                    </Link>
-
-                    <Link
-                        href="https://www.linkedin.com/in/andre-gabriel-melo/"
-                        className={buttonVariants({
-                            variant: "outline",
-                            className: buttonClasses,
-                            size: "icon",
-                        })}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        <Linkedin size={24} />
-                    </Link>
-                </div>
             </header>
         </>
     );

@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:is(.dark *));
+
 @plugin 'tailwindcss-animate';
 
 @layer base {
@@ -99,14 +101,6 @@
     --radius-sm: calc(var(--radius) - 4px);
 }
 
-@utility title {
-    @apply text-4xl font-extrabold;
-}
-
-@utility subtitle {
-    @apply text-xl font-bold;
-}
-
 @layer base {
     *,
     ::after,
@@ -116,6 +110,15 @@
         border-color: var(--color-gray-200, currentColor);
     }
     body {
-        @apply bg-background text-foreground bg-no-repeat px-24;
+        @apply bg-background text-foreground;
+    }
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+    }
+  body {
+    @apply bg-background text-foreground;
     }
 }

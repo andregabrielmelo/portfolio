@@ -2,6 +2,11 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
+import { ThemeProvider } from "@/app/components/theme-provider";
+
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+
 const geistSans = Geist({
     variable: "--font-geist-sans",
     subsets: ["latin"],
@@ -26,11 +31,24 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="en" className="dark">
+        <html
+            lang="en"
+            className="dark overscroll-contain scroll-smooth"
+            suppressHydrationWarning
+        >
             <body
-                className={`${geistSans.variable} ${geistMono.variable} antialiased overscroll-contain scroll-smooth`}
+                className={`${geistSans.variable} ${geistMono.variable} antialiased`}
             >
-                {children}
+                <ThemeProvider
+                    attribute="class"
+                    defaultTheme="system"
+                    enableSystem
+                    disableTransitionOnChange
+                >
+                    <Header />
+                    <main className="max-w-5xl mx-auto">{children}</main>
+                    <Footer />
+                </ThemeProvider>
             </body>
         </html>
     );

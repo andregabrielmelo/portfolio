@@ -1,8 +1,7 @@
-import Image from "next/image";
+import Link from "next/link";
 
-import Header from "./components/Header";
-import Cards from "./components/Cards";
-import { Button } from "./components/ui/button";
+import Cards from "@/app/components/Cards";
+import { buttonVariants } from "@/app/components/ui/button";
 
 import { SquareArrowOutUpRight } from "lucide-react";
 
@@ -16,50 +15,60 @@ export default function Home() {
 
     return (
         <>
-            <Header />
-            <main className="mx-4">
-                <section className="flex h-96 gap-8 items-center justify-center">
-                    <Image
-                        src="/selfie.jpeg"
-                        alt="Selfie"
-                        width={200}
-                        height={200}
-                        className="aspect-square size-72 border-white border-2"
-                    />
-                    <div className="flex flex-col gap-4">
-                        <h1 className="text-4xl font-black">André Melo</h1>
-                        <p className="max-w-[30rem]">
-                            Cursando a faculdade e focado em desenvolvimento
-                            web. Buscando oportunidades para projetos
-                            interessantes!
+            <section className="flex flex-col justify-center gap-4 py-8">
+                <div className="flex justify-between pb-4">
+                    <h1 className="font-extrabold text-4xl">André Melo</h1>
+                    <Link
+                        href="files/resume.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={buttonVariants({
+                            className:
+                                "w-28 flex justify-center text-1xl !font-bold items-center",
+                            size: "icon",
+                        })}
+                        title="Veja meu currículo em outra página"
+                    >
+                        Currículo
+                        <SquareArrowOutUpRight />
+                    </Link>
+                </div>
+                <p>
+                    Sou um estudante de 20 anos do curso de graduação em ciência
+                    da computação. Adoro criar coisas e resolver problemas.
+                    Focado em desenvolvimento web. Se não estiver programando,
+                    provavelmente estarei jogando, lendo, na academia ou
+                    assistindo filmes.
+                </p>
+                <p>
+                    Sempre buscando oportunidades para projetos interessantes!
+                </p>
+            </section>
+            <section className="flex flex-col gap-3 py-8">
+                <h1 className="text-xl font-bold">Tecnologias utilizadas</h1>
+                <h3 className="text-muted-foreground">Linguagens</h3>
+                <Cards cards={languages} className={"my-2"} />
+                <h3 className="text-muted-foreground">Frameworks</h3>
+                <Cards cards={frameworks} className={"my-2"} />
+                <h3 className="text-muted-foreground">DBMS</h3>
+                <Cards cards={dbms} className={"my-2"} />
+                <h3 className="text-muted-foreground">Ferramentas</h3>
+                <Cards cards={tools} className={"my-2"} />
+            </section>
+            <section className="flex flex-col gap-3 py-8" id="projects">
+                <h1 className="text-xl font-bold">Projetos</h1>
+                <div className="grid grid-cols-4 gap-4">
+                    <div className="flex flex-col gap-1">
+                        <h4 className="text-muted-foreground underline underline-offset-4">
+                            Anime Manager
+                        </h4>
+                        <p>
+                            Website para procurar animes e montar listas como
+                            eles
                         </p>
-                        <a
-                            href="files/Currículo.pdf"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            <Button className="text-1xl font-semibold itemns-center">
-                                Currículo
-                                <SquareArrowOutUpRight />
-                            </Button>
-                        </a>
                     </div>
-                </section>
-                <section className="flex flex-col gap-3">
-                    <h1 className="title">Tecnologias utilizadas</h1>
-                    <h3 className="subtitle">Linguagens</h3>
-                    <Cards cards={languages} />
-                    <h3 className="subtitle">Frameworks</h3>
-                    <Cards cards={frameworks} />
-                    <h3 className="subtitle">DBMS</h3>
-                    <Cards cards={dbms} />
-                    <h3 className="subtitle">Ferramentas</h3>
-                    <Cards cards={tools} />
-                </section>
-            </main>
-            <footer className="flex justify-center p-4">
-                <p>Website feito usando Nextjs</p>
-            </footer>
+                </div>
+            </section>
         </>
     );
 }
