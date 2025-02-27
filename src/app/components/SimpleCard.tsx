@@ -17,11 +17,11 @@ export default function SimpleCard({
 }) {
     return (
         <div
-            className="flex gap-2 items-center p-3 border-b-2 border-border hover:brightness-125 ease-in-out hover:outline-offset-4"
+            className="flex gap-2 items-center p-3 max-w-64 border-b-2 border-border hover:border-white hover:brightness-80 dark:hover:brightness-120"
             title={title}
         >
             <figure
-                className={`p-2 rounded-md`}
+                className={`p-2 rounded-md shrink-0`}
                 style={{ backgroundColor: bgColor + "26" }}
             >
                 <Image
@@ -32,7 +32,7 @@ export default function SimpleCard({
                     className={"size-5 " + className}
                 />
             </figure>
-            <p className="">{name}</p>
+            <p>{name}</p>
         </div>
     );
 }

@@ -46,8 +46,8 @@ export default function RootLayout({
                     disableTransitionOnChange
                 >
                     <Header />
-                    <main className="max-w-5xl mx-auto">{children}</main>
-                    <Footer />
+                    <main className="md:px-32 px-8 mx-auto">{children}</main>
+                    <Footer className="flex py-4 items-center md:px-32 px-8 mx-auto" />
                 </ThemeProvider>
             </body>
         </html>

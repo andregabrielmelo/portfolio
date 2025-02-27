@@ -17,7 +17,12 @@ export default function Cards({
     className: string;
 }) {
     return (
-        <div className={cn("grid grid-cols-4 gap-4", className)}>
+        <div
+            className={cn(
+                "grid gap-4 max-sm:grid-cols-2 max-md:grid-cols-3 grid-cols-4 ",
+                className
+            )}
+        >
             {cards.map((card: SimpleCard) => (
                 <SimpleCard
                     key={card.name}
