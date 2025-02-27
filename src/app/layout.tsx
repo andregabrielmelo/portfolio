@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
+import { Analytics } from "@vercel/analytics/react";
+
 import { ThemeProvider } from "@/app/components/theme-provider";
 
 import Header from "./components/Header";
@@ -46,7 +48,10 @@ export default function RootLayout({
                     disableTransitionOnChange
                 >
                     <Header />
-                    <main className="md:px-32 px-8 mx-auto">{children}</main>
+                    <main className="md:px-32 px-8 mx-auto">
+                        {children}
+                        <Analytics />
+                    </main>
                     <Footer className="flex py-4 items-center md:px-32 px-8 mx-auto" />
                 </ThemeProvider>
             </body>
