@@ -2,7 +2,9 @@ import Link from "next/link";
 
 import { buttonVariants } from "./ui/button";
 
-import { Github, Linkedin, Mail } from "lucide-react";
+import { Mail } from "lucide-react";
+import { Github } from "./logos/Github";
+import { Linkedin } from "./logos/Linkedin";
 
 export default function Footer({ className }: { className?: string }) {
     const buttonClasses = "transition-all";
@@ -20,6 +22,7 @@ export default function Footer({ className }: { className?: string }) {
                         className: buttonClasses,
                         size: "icon",
                     })}
+                    title="Me envie um e-mail!"
                 >
                     <Mail size={24} />
                 </Link>
@@ -33,8 +36,9 @@ export default function Footer({ className }: { className?: string }) {
                     })}
                     target="_blank"
                     rel="noopener noreferrer"
+                    title="Meu Github"
                 >
-                    <Github size={24} />
+                    <Github />
                 </Link>
 
                 <Link
@@ -46,8 +50,9 @@ export default function Footer({ className }: { className?: string }) {
                     })}
                     target="_blank"
                     rel="noopener noreferrer"
+                    title="Meu Linkedin"
                 >
-                    <Linkedin size={24} />
+                    <Linkedin />
                 </Link>
             </div>
         </footer>
