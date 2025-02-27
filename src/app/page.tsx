@@ -57,7 +57,7 @@ export default function Home() {
             </section>
             <section className="flex flex-col gap-3 py-8" id="projects">
                 <h1 className="text-xl font-bold">Projetos</h1>
-                <div className="grid grid-cols-4 gap-4">
+                <div className="grid gap-4 max-sm:grid-cols-1 max-md:grid-cols-2 grid-cols-3">
                     <div className="flex flex-col gap-1">
                         <h4 className="text-muted-foreground underline underline-offset-4">
                             Anime Manager

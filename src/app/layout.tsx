@@ -49,7 +49,7 @@ export default function RootLayout({
                     disableTransitionOnChange
                 >
                     <Header className="flex justify-between items-center p-8 sticky top-0 transition-all backdrop-blur-xs bg-gradient-to-b from-(--color-background) via-(--color-background) via-35% to-(--color-background)/5" />
-                    <main className="md:px-32 px-8 mx-auto">
+                    <main className="md:px-32 px-8">
                         {children}
                         <Analytics />
                         <SpeedInsights />
