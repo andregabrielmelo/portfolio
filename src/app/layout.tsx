@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
 import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 import { ThemeProvider } from "@/app/components/theme-provider";
 
@@ -51,6 +52,7 @@ export default function RootLayout({
                     <main className="md:px-32 px-8 mx-auto">
                         {children}
                         <Analytics />
+                        <SpeedInsights />
                     </main>
                     <Footer className="flex py-4 items-center md:px-32 px-8 mx-auto" />
                 </ThemeProvider>
