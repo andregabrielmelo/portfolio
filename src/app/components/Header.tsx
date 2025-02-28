@@ -34,14 +34,14 @@ export default function Header({ className }: { className?: string }) {
                                 Projetos
                             </Link>
                         </li>
-                        <li>
+                        {/* <li>
                             <Link
                                 className="text-muted-foreground hover:underline hover:underline-offset-4"
                                 href="/hobbies"
                             >
                                 Hobbies
                             </Link>
-                        </li>
+                        </li> */}
                     </ul>
                     <ThemeToggle />
                 </nav>
