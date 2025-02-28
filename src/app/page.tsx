@@ -46,14 +46,38 @@ export default function Home() {
             </section>
             <section className="flex flex-col gap-3 py-8">
                 <h1 className="text-xl font-bold">Tecnologias utilizadas</h1>
+
                 <h3 className="text-muted-foreground">Linguagens</h3>
-                <Cards cards={languages} className={"my-2"} />
+                <Cards
+                    cards={languages}
+                    className={
+                        "grid gap-4 max-sm:grid-cols-2 max-md:grid-cols-3 grid-cols-4 my-2"
+                    }
+                />
+
                 <h3 className="text-muted-foreground">Frameworks</h3>
-                <Cards cards={frameworks} className={"my-2"} />
+                <Cards
+                    cards={frameworks}
+                    className={
+                        "grid gap-4 max-sm:grid-cols-2 max-md:grid-cols-3 grid-cols-4 my-2"
+                    }
+                />
+
                 <h3 className="text-muted-foreground">DBMS</h3>
-                <Cards cards={dbms} className={"my-2"} />
+                <Cards
+                    cards={dbms}
+                    className={
+                        "grid gap-4 max-sm:grid-cols-2 max-md:grid-cols-3 grid-cols-4 my-2"
+                    }
+                />
+
                 <h3 className="text-muted-foreground">Ferramentas</h3>
-                <Cards cards={tools} className={"my-2"} />
+                <Cards
+                    cards={tools}
+                    className={
+                        "grid gap-4 max-sm:grid-cols-2 max-md:grid-cols-3 grid-cols-4 my-2"
+                    }
+                />
             </section>
             <section className="flex flex-col gap-3 py-8" id="projects">
                 <h1 className="text-xl font-bold">Projetos</h1>
