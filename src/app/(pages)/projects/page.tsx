@@ -7,9 +7,7 @@ export default function About() {
                     <h4 className="text-muted-foreground underline underline-offset-4">
                         Anime Manager
                     </h4>
-                    <p>
-                        Website para procurar animes e montar listas como eles
-                    </p>
+                    <p>Website para procurar animes e montar listas com eles</p>
                 </div>
             </div>
         </>

@@ -87,7 +87,7 @@ export default function Home() {
                             Anime Manager
                         </h4>
                         <p>
-                            Website para procurar animes e montar listas como
+                            Website para procurar animes e montar listas com
                             eles
                         </p>
                     </div>
