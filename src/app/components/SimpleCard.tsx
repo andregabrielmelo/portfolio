@@ -22,7 +22,7 @@ export default function SimpleCard({
         >
             <figure
                 className={`p-2 rounded-md shrink-0`}
-                style={{ backgroundColor: bgColor + "26" }}
+                style={{ background: bgColor }}
             >
                 <Image
                     src={src}
