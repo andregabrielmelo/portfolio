@@ -22,7 +22,7 @@ export default function Footer({ className }: { className?: string }) {
                         className: buttonClasses,
                         size: "icon",
                     })}
-                    title="Me envie um e-mail!"
+                    title="E-mail"
                 >
                     <Mail size={24} />
                 </Link>
@@ -36,7 +36,7 @@ export default function Footer({ className }: { className?: string }) {
                     })}
                     target="_blank"
                     rel="noopener noreferrer"
-                    title="Meu Github"
+                    title="Github"
                 >
                     <Github />
                 </Link>
@@ -50,7 +50,7 @@ export default function Footer({ className }: { className?: string }) {
                     })}
                     target="_blank"
                     rel="noopener noreferrer"
-                    title="Meu Linkedin"
+                    title="Linkedin"
                 >
                     <Linkedin />
                 </Link>
