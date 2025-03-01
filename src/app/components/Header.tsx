@@ -17,7 +17,7 @@ export default function Header({ className }: { className?: string }) {
                     <Logo className="text-foreground w-6" />
                 </Link>
                 <nav className="flex gap-3 items-center">
-                    <ul className="flex gap-3">
+                    {/* <ul className="flex gap-3">
                         <li>
                             <Link
                                 className="text-muted-foreground hover:underline hover:underline-offset-4"
@@ -34,15 +34,15 @@ export default function Header({ className }: { className?: string }) {
                                 Projetos
                             </Link>
                         </li>
-                        {/* <li>
+ <li>
                             <Link
                                 className="text-muted-foreground hover:underline hover:underline-offset-4"
                                 href="/hobbies"
                             >
                                 Hobbies
                             </Link>
-                        </li> */}
-                    </ul>
+                        </li> 
+                    </ul> */}
                     <ThemeToggle />
                 </nav>
             </header>
