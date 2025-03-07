@@ -32,12 +32,12 @@ export const technologies: technology[] = [
         bgColor: "#FFD43B26",
         type: "language",
     },
-    {
-        name: "Golang",
-        src: "logos/golang.svg",
-        bgColor: "#00ADD826",
-        type: "language",
-    },
+    // {
+    //     name: "Golang",
+    //     src: "logos/golang.svg",
+    //     bgColor: "#00ADD826",
+    //     type: "language",
+    // },
 
     // Frameworks & Libraries
     {

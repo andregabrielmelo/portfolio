@@ -63,7 +63,7 @@ export default function Home() {
                     }
                 />
 
-                <h3 className="text-muted-foreground">DBMS</h3>
+                <h3 className="text-muted-foreground">Banco de Dados</h3>
                 <Cards
                     cards={dbms}
                     className={
