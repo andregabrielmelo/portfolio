@@ -23,6 +23,13 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
     title: "André Melo",
     description: "Portfolio of projects, skills and about me",
+    icons: {
+        icon: "/favicon.svg", // Default favicon
+        apple: [
+            { url: "/favicons/apple-icon-192x192.png", sizes: "192x192" },
+            { url: "/favicons/apple-icon-512x512.png", sizes: "512x512" },
+        ],
+    },
 };
 
 export default function RootLayout({
