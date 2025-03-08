@@ -26,6 +26,7 @@ export const metadata: Metadata = {
     icons: {
         icon: "/favicon.svg", // Default favicon
         apple: [
+            { url: "/favicons/apple-icon.png" },
             { url: "/favicons/apple-icon-192x192.png", sizes: "192x192" },
             { url: "/favicons/apple-icon-512x512.png", sizes: "512x512" },
         ],
