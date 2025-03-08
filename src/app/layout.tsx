@@ -23,9 +23,6 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
     title: "André Melo",
     description: "Portfolio of projects, skills and about me",
-    icons: {
-        icon: [{ url: "/favicon.svg" }],
-    },
 };
 
 export default function RootLayout({
