@@ -1,4 +1,4 @@
-# Portfolio Websi
+# Portfolio Website
 
 I made this website to show a little bit more about myself.
 
