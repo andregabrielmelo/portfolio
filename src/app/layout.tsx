@@ -24,11 +24,19 @@ export const metadata: Metadata = {
     title: "André Melo",
     description: "Portfolio of projects, skills and about me",
     icons: {
-        icon: "/favicon.svg", // Default favicon
+        icon: { url: "/favicon.svg", type: "image/svg+xml" }, // Default favicon
         apple: [
-            { url: "/favicons/apple-icon.png" },
-            { url: "/favicons/apple-icon-192x192.png", sizes: "192x192" },
-            { url: "/favicons/apple-icon-512x512.png", sizes: "512x512" },
+            { url: "/favicons/apple-icon.png", type: "image/png" },
+            {
+                url: "/favicons/apple-icon-192x192.png",
+                sizes: "192x192",
+                type: "image/png",
+            },
+            {
+                url: "/favicons/apple-icon-512x512.png",
+                sizes: "512x512",
+                type: "image/png",
+            },
         ],
     },
 };
