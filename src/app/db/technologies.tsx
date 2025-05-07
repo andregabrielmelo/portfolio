@@ -27,6 +27,18 @@ export const technologies: technology[] = [
         type: "language",
     },
     {
+        name: "C#",
+        src: "logos/csharp.svg",
+        bgColor: "#a179dc26",
+        type: "language",
+    },
+    {
+        name: "C++",
+        src: "logos/cpp.svg",
+        bgColor: "#5c8dbc26",
+        type: "language",
+    },
+    {
         name: "Python",
         src: "logos/python.svg",
         bgColor: "#FFD43B26",
@@ -41,6 +53,12 @@ export const technologies: technology[] = [
 
     // Frameworks & Libraries
     {
+        name: "Angular",
+        src: "logos/angular.svg",
+        bgColor: "#b52e3126",
+        type: "framework",
+    },
+    {
         name: "React.js",
         src: "logos/react.svg",
         bgColor: "#61DAFB26",
@@ -54,15 +72,15 @@ export const technologies: technology[] = [
         darkInvert: true,
     },
     {
-        name: "TailwindCSS",
-        src: "logos/tailwindcss.svg",
-        bgColor: "#38B2AC26",
-        type: "framework",
-    },
-    {
         name: "Node.js",
         src: "logos/nodejs.svg",
         bgColor: "#8CC84B26",
+        type: "framework",
+    },
+    {
+        name: "TailwindCSS",
+        src: "logos/tailwindcss.svg",
+        bgColor: "#38B2AC26",
         type: "framework",
     },
     {
@@ -80,6 +98,12 @@ export const technologies: technology[] = [
     },
 
     // Databases
+    {
+        name: "SQL Server",
+        src: "logos/sqlserver.svg",
+        bgColor: "#b71d1d26",
+        type: "dbms",
+    },
     {
         name: "PostgreSQL",
         src: "logos/postgresql.svg",
@@ -110,16 +134,41 @@ export const technologies: technology[] = [
 
     // Tools
     {
+        name: "Git",
+        src: "logos/git.svg",
+        bgColor: "#F0503226",
+        type: "tool",
+    },
+    {
+        name: "GitHub",
+        src: "logos/github.svg",
+        bgColor: "#a7a7a726",
+        type: "tool",
+    },
+    {
         name: "Docker",
         src: "logos/docker.svg",
         bgColor: "#2496ED26",
         type: "tool",
     },
     {
-        name: "Git",
-        src: "logos/git.svg",
-        bgColor: "#F0503226",
+        name: "Eslint",
+        src: "logos/eslint.svg",
+        bgColor: "#35459f26",
         type: "tool",
+    },
+    {
+        name: "Prettier",
+        src: "logos/prettier.svg",
+        bgColor: "#47414526",
+        type: "tool",
+    },
+    {
+        name: "Prisma",
+        src: "logos/prisma.svg",
+        bgColor: "#00000026",
+        type: "tool",
+        darkInvert: true,
     },
     {
         name: "Yarn",
@@ -130,13 +179,13 @@ export const technologies: technology[] = [
     {
         name: "Figma",
         src: "logos/figma.svg",
-        bgColor: "#F24E1E26",
+        bgColor: "#47414526",
         type: "tool",
     },
     {
         name: "Vercel",
         src: "logos/vercel.svg",
-        bgColor: "#a7a7a726",
+        bgColor: "#00000026",
         type: "tool",
         darkInvert: true,
     },
